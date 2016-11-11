@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.martinrgb.rapidinterpolaotr.MainActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text = "Animate!" />
+
+
+
+    <com.martin.interpolator.InterpolatorConfigurationView
+        android:id="@+id/interpolator_configurator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="320dp"
+        android:numColumns="3"
+        android:verticalSpacing="40dp"
+        android:horizontalSpacing="40dp"
+        android:layout_centerHorizontal="true"
+        android:stretchMode="columnWidth"
+        android:gravity="top" />
+
+
+</RelativeLayout>
