@@ -32,6 +32,7 @@ import com.martin.interpolator.InterpolatorConfigurationView;
     android:layout_gravity="bottom"
     android:layout_alignParentBottom="true"
     android:layout_alignParentStart="true">
+</com.martin.interpolator.InterpolatorConfigurationView>
 ```
 2.Create a function to set Interpolator Config & add ConfiguratorView
 
