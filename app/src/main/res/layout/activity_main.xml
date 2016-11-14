@@ -7,36 +7,38 @@
     tools:context="com.example.martinrgb.rapidinterpolaotr.MainActivity">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:text = "Animate!" />
-
-
-
-    <com.martin.interpolator.InterpolatorConfigurationView
-        android:id="@+id/interpolator_configurator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true" />
-
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnWidth="320dp"
         android:numColumns="3"
-        android:verticalSpacing="40dp"
-        android:horizontalSpacing="40dp"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
         android:layout_centerHorizontal="true"
         android:stretchMode="columnWidth"
         android:gravity="top" />
+
+
+    <Button
+        android:text="Animate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.martin.interpolator.InterpolatorConfigurationView
+        android:id="@+id/interpolator_configurator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+
+    </com.martin.interpolator.InterpolatorConfigurationView>
 
 
 </RelativeLayout>
