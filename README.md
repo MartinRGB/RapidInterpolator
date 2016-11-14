@@ -6,8 +6,11 @@ As a UI Prototype Designer & Engineer.The most painful part is compiling.After I
 
 ## Import:
 1.Add InterpolatorAnimator.java
+
     InterpolatorConfig.java
+    
     InterpolatorConfigRegistry.java
+    
     InterpolatorConfigurationView.java into your project.
     
 2.Import them in your MainActivity
