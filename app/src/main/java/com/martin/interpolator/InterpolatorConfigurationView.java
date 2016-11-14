@@ -602,7 +602,7 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param overshot 回退的量，值越趋近于0，越接近简单的加速/减速运动；如果赋值为0，会被替换为默认值：1.70158f。
+         * @param overshot
          */
         public BackEaseInInterpolater(float overshot) {
             mOvershot = overshot;
@@ -622,7 +622,7 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param overshot 回退的量，值越趋近于0，越接近简单的加速/减速运动；如果赋值为0，会被替换为默认值：1.70158f。
+         * @param overshot
          */
         public BackEaseInOutInterpolater(float overshot) {
             mOvershot = overshot;
@@ -651,7 +651,7 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param overshot 回退的量，值越趋近于0，越接近简单的加速/减速运动；如果赋值为0，会被替换为默认值：1.70158f。
+         * @param overshot
          */
         public BackEaseOutInterpolater(float overshot) {
             mOvershot = overshot;
@@ -756,8 +756,8 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param amplitude 弹簧往复的幅度，值越大，往复幅度越大；如果赋值为0，会被替换为默认值：0.3f。
-         * @param period    弹簧往复的次数，值越趋近于0，往复次数越多；如果赋值为0，会被替换为默认值：1；如果>1，会趋近简单的加速/减速运动。
+         * @param amplitude
+         * @param period
          */
         public ElasticEaseInInterpolater(float amplitude, float period) {
             mAmplitude = amplitude;
@@ -799,8 +799,8 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param amplitude 弹簧往复的幅度，值越大，往复幅度越大；如果赋值为0，会被替换为默认值：0.3f。
-         * @param period    弹簧往复的次数，值越趋近于0，往复次数越多；如果赋值为0，会被替换为默认值：1；如果>1，会趋近简单的加速/减速运动。
+         * @param amplitude
+         * @param period
          */
         public ElasticEaseInOutInterpolater(float amplitude, float period) {
             mAmplitude = amplitude;
@@ -851,8 +851,8 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
 
         /**
-         * @param amplitude 弹簧往复的幅度，值越大，往复幅度越大；如果赋值为0，会被替换为默认值：0.3f。
-         * @param period    弹簧往复的次数，值越趋近于0，往复次数越多；如果赋值为0，会被替换为默认值：1；如果>1，会趋近简单的加速/减速运动。
+         * @param amplitude
+         * @param period
          */
         public ElasticEaseOutInterpolater(float amplitude, float period) {
             mAmplitude = amplitude;
@@ -1009,7 +1009,6 @@ public class InterpolatorConfigurationView extends FrameLayout {
         }
     }
 
-    //根据输入deinterpolatorName，来获取索引值i
     public static int getPosition(String interpolatorName) {
         int pos = 0;
         for (int i = 0; i < interpolatorNames.length; i++) {
