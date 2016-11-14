@@ -87,6 +87,7 @@ findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 ```
 
 ## Types of Interpolator
+47 different easing interpolators(Which contains Android Native Interpolaotrs & interpolators from [Easing.net](http://easings.net/zh-cn))
 ```
 "Linear",
 "LinearOutSlowIn",
