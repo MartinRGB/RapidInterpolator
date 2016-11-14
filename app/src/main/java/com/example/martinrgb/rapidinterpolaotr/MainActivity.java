@@ -2,13 +2,10 @@ package com.example.martinrgb.rapidinterpolaotr;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.Interpolator;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -17,10 +14,6 @@ import com.martin.interpolator.InterpolatorConfig;
 import com.martin.interpolator.InterpolatorConfigRegistry;
 import com.martin.interpolator.InterpolatorConfigurationView;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends Activity {
 
@@ -45,7 +38,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         deleteBars();
         setContentView(R.layout.activity_main);
-        springConfig();
+        interpolatorConfig();
 
         mgridview = (GridView) findViewById(R.id.gridview);
         mgridview.setAdapter(new ImageAdapter(this));
@@ -107,7 +100,7 @@ public class MainActivity extends Activity {
     }
 
 
-    private void springConfig(){
+    private void interpolatorConfig(){
 
         mInterpolatorConfiguratorView = (InterpolatorConfigurationView) findViewById(R.id.interpolator_configurator);
 
