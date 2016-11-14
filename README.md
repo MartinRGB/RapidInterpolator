@@ -136,7 +136,8 @@ findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 "BounceEaseOut",
 "BounceEaseInOut"
 ```
-
+## Thanks
+Special thanks to [CymChad](https://github.com/oubowu/PinnedSectionItemDecoration),he gave me lots of help in java coding.
 
 
 
