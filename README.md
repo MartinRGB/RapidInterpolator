@@ -138,6 +138,10 @@ findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 "BounceEaseOut",
 "BounceEaseInOut"
 ```
+
+## Notice
+In the latest update,I added a typeface into the project,don't forget to grab it into your project,or it will be crushed...
+
 ## Thanks
 Special thanks to [CymChad](https://github.com/CymChad/BaseRecyclerViewAdapterHelper),he gave me lots of help in java coding.
 
