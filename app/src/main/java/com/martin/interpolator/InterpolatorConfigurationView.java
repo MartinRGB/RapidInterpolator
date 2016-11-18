@@ -8,7 +8,9 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -62,7 +64,9 @@ public class InterpolatorConfigurationView extends FrameLayout {
     private final float mRevealPx;
     private boolean mIsOut = false;
     private final InterpolatorConfigRegistry interpolatorConfigRegistry;
-    private final int mTextColor = Color.argb(255, 225, 225, 225);
+    private final int mTextColor = Color.argb(255, 255, 255, 255);
+    private final int mTextSize = 16;
+    private final Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/DIN-Bold.otf");
     private SeekBar mDurationSeekBar;
     private SeekBar mDelayTimeSeekBar;
     private Spinner mInterpolatorSelectorSpinner;
@@ -228,10 +232,40 @@ public class InterpolatorConfigurationView extends FrameLayout {
             interpolatorMap.put(interpolatorNames[i], mInterpolators[i]);
         }
         ArrayAdapter<String> curvespinnerAdapter =
-                new ArrayAdapter<String>(context,
-                        android.R.layout.simple_spinner_dropdown_item, interpolatorNames);
+                new ArrayAdapter<String>(context,android.R.layout.simple_spinner_dropdown_item, interpolatorNames){
+
+
+                        public View getView(int position, View convertView, ViewGroup parent) {
+
+                        View v = super.getView(position, convertView, parent);
+                        TextView tv = ((TextView) v);
+
+
+
+                        AbsListView.LayoutParams params = new AbsListView.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.MATCH_PARENT);
+                        tv.setLayoutParams(params);
+                        tv.setSingleLine();
+
+                        int twelvePx = dpToPx(12, getResources());
+                        tv.setPadding(twelvePx, twelvePx, twelvePx, twelvePx);
+                        tv.setTextColor(mTextColor);
+                        //tv.setEllipsize(TextUtils.TruncateAt.END);
+                        //tv.setTypeface(tv.getTypeface(), Typeface.BOLD);
+
+
+                        tv.setTypeface(myTypeface);
+                        tv.setTextSize(mTextSize);
+                        return v;
+
+
+                    }
+                };
         mCurveSelectorSpinner.setAdapter(curvespinnerAdapter);
         mCurveSelectorSpinner.setOnItemSelectedListener(new CurveSelectedListener());
+
+
 
 
         refreshInterpolatorConfigurations();
@@ -298,7 +332,7 @@ public class InterpolatorConfigurationView extends FrameLayout {
         mCurveSelectorSpinner = new Spinner(context, Spinner.MODE_DIALOG);
         params = createMatchWrapParams();
         params.gravity = Gravity.TOP;
-        params.setMargins(tenPx, twentyPx * 3, tenPx, 0);
+        params.setMargins(tenPx, twentyPx * 5/2, tenPx, 0);
         mCurveSelectorSpinner.setLayoutParams(params);
 
         container.addView(mCurveSelectorSpinner);
@@ -311,12 +345,13 @@ public class InterpolatorConfigurationView extends FrameLayout {
         mDurationLabel = new TextView(getContext());
         mDurationLabel.setTextColor(mTextColor);
         params = createLayoutParams(
-                dpToPx(65, resources),
+                dpToPx(80, resources),
                 ViewGroup.LayoutParams.MATCH_PARENT);
         mDurationLabel.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
         mDurationLabel.setLayoutParams(params);
         mDurationLabel.setMaxLines(1);
-        mDurationLabel.setTextSize(10);
+        mDurationLabel.setTextSize(14);
+        mDurationLabel.setTypeface(myTypeface);
         seekWrapper.addView(mDurationLabel);
 
         seekWrapper = new LinearLayout(context);
@@ -333,11 +368,12 @@ public class InterpolatorConfigurationView extends FrameLayout {
 
         mDelayTimenLabel = new TextView(getContext());
         mDelayTimenLabel.setTextColor(mTextColor);
-        params = createLayoutParams(dpToPx(65, resources), ViewGroup.LayoutParams.MATCH_PARENT);
+        params = createLayoutParams(dpToPx(80, resources), ViewGroup.LayoutParams.MATCH_PARENT);
         mDelayTimenLabel.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
         mDelayTimenLabel.setLayoutParams(params);
         mDelayTimenLabel.setMaxLines(1);
-        mDelayTimenLabel.setTextSize(10);
+        mDelayTimenLabel.setTextSize(14);
+        mDelayTimenLabel.setTypeface(myTypeface);
         seekWrapper.addView(mDelayTimenLabel);
 
         View nub = new View(context);
@@ -433,17 +469,17 @@ public class InterpolatorConfigurationView extends FrameLayout {
             float delayTimeRange = MAX_DELAYTIME - MIN_DELAYTIME;
 
             if (seekBar == mDurationSeekBar) {
-                float scaledDuration = ((val) * durationRange) / MAX_SEEKBAR_VAL + MIN_DURATION;
+                float scaledDuration = (int)((val) * durationRange) / MAX_SEEKBAR_VAL + MIN_DURATION;
                 mSelectedInterpolatorConfig.duration = (long) scaledDuration;
                 String roundedDurationLabel = DECIMAL_FORMAT.format(scaledDuration);
-                mDurationLabel.setText("时间"+ roundedDurationLabel + "ms");
+                mDurationLabel.setText("T: "+ roundedDurationLabel + "ms");
             }
 
             if (seekBar == mDelayTimeSeekBar) {
-                float scaledDelayTime = ((val) * delayTimeRange) / MAX_SEEKBAR_VAL + MIN_DELAYTIME;
+                float scaledDelayTime = (int)((val) * delayTimeRange) / MAX_SEEKBAR_VAL + MIN_DELAYTIME;
                 mSelectedInterpolatorConfig.delayTime = (long) scaledDelayTime;
                 String roundedDelayTimeLabel = DECIMAL_FORMAT.format(scaledDelayTime);
-                mDelayTimenLabel.setText("延迟"+ roundedDelayTimeLabel + "ms");
+                mDelayTimenLabel.setText("D: "+ roundedDelayTimeLabel + "ms");
             }
         }
 
@@ -542,7 +578,10 @@ public class InterpolatorConfigurationView extends FrameLayout {
                 textView.setLayoutParams(params);
                 int twelvePx = dpToPx(12, getResources());
                 textView.setPadding(twelvePx, twelvePx, twelvePx, twelvePx);
+
+                textView.setTypeface(myTypeface);
                 textView.setTextColor(mTextColor);
+                textView.setTextSize(mTextSize);
             } else {
                 textView = (TextView) convertView;
             }

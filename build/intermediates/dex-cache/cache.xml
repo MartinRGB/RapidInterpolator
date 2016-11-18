@@ -2,6 +2,15 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.0_3b4ac3337dafe09ce004f2c1321229a745826ba5.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
         jumboMode="true"
@@ -29,6 +38,15 @@
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_b37c508e121fd3f110b331a77f4da38265beccb6/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_b37c508e121fd3f110b331a77f4da38265beccb6.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
@@ -45,6 +63,51 @@
         revision="25.0.0"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_4d8c75f4a8bc170071175ebdec8386bf3ce34085/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6468b27081931d053dc893d4c46adaf6032e01c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_b092e43f48709c875888e14d03092413e953c021.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_4d8c75f4a8bc170071175ebdec8386bf3ce34085.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_e36aac041e55971a0239bf4cc33450a0cafdd5af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_817d6388912019d815dc493e95178fd0b1820c54.jar" />
     </item>
     <item
         is-multidex="true"
@@ -74,6 +137,15 @@
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_6468b27081931d053dc893d4c46adaf6032e01c4/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_d4e707e4f05420a7261d3e87816052cb653dc1f9.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
@@ -81,6 +153,24 @@
         revision="25.0.0"
         sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_6e6bff39fea4a2010cb1e55de441f0c669223955/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_d8577b079209a90647da9a6ab007d3607720d675.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.0_12478084dc8303aae22db5e63054deee72497ac1.jar" />
     </item>
     <item
         is-multidex="true"
@@ -110,6 +200,24 @@
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_12478084dc8303aae22db5e63054deee72497ac1/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.0_fbebc603866726ddfa008cd1488d20a2d2fba523.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_c7942d277e5a2e0507b3cd863ae4a74d71597463.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
         jumboMode="true"
@@ -137,6 +245,15 @@
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e0a792c427d736029493838fa854175bc1d8d336/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_fd487575a201cd890c0f536df744424a51739b53.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
         jumboMode="true"
@@ -153,6 +270,24 @@
         revision="25.0.0"
         sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
         <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_d31f1caee8f52e4de072dfda3c60d2ea074e192c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6e6bff39fea4a2010cb1e55de441f0c669223955.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/MartinRGB/Desktop/Github/RapidInterpolator/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.0_d31f1caee8f52e4de072dfda3c60d2ea074e192c.jar" />
     </item>
 
 </items>
