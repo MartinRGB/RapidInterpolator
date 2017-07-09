@@ -2,31 +2,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.martinrgb.rapidinterpolaotr.MainActivity">
 
 
-    <GridView
-        android:id="@+id/gridview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnWidth="320dp"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:layout_centerHorizontal="true"
-        android:stretchMode="columnWidth"
-        android:gravity="top" />
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="320dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:gravity="top"
+            android:layout_centerHorizontal="true"/>
 
 
-    <Button
-        android:text="Animate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_marginTop="400dp"
-        android:layout_centerHorizontal="true"/>
+        <Button
+            android:text="Animate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
 
     <com.martin.interpolator.InterpolatorConfigurationView
         android:id="@+id/interpolator_configurator"

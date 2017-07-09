@@ -18,6 +18,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
@@ -61,8 +62,8 @@ public class InterpolatorConfigurationView extends FrameLayout {
     private final SpinnerAdapter spinnerAdapter;
     private final List<InterpolatorConfig> mInterpolatorConfigs = new ArrayList<InterpolatorConfig>();
     //private final Spring mRevealerSpring;
-    private final float mStashPx;
-    private final float mRevealPx;
+    private float mStashPx;
+    private float mRevealPx;
     private boolean mIsOut = false;
     private final InterpolatorConfigRegistry interpolatorConfigRegistry;
     private final int mTextColor = Color.argb(255, 255, 255, 255);
@@ -145,10 +146,11 @@ public class InterpolatorConfigurationView extends FrameLayout {
 
         Resources resources = getResources();
         mRevealPx = dpToPx(40, resources);
-        mStashPx = dpToPx(280, resources);
+        mStashPx = dpToPx(270, resources);
 
 
         addView(generateHierarchy(context));
+
 
         SeekbarListener seekbarListener = new SeekbarListener();
         mDurationSeekBar.setMax(MAX_SEEKBAR_VAL);
@@ -262,9 +264,6 @@ public class InterpolatorConfigurationView extends FrameLayout {
         mCurveSelectorSpinner.setAdapter(curvespinnerAdapter);
         mCurveSelectorSpinner.setOnItemSelectedListener(new CurveSelectedListener());
 
-
-
-
         refreshInterpolatorConfigurations();
 
 
@@ -292,43 +291,44 @@ public class InterpolatorConfigurationView extends FrameLayout {
         LinearLayout seekWrapper;
 
         FrameLayout root = new FrameLayout(context);
-        params = createLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dpToPx(300, resources));
+        params = createLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         root.setLayoutParams(params);
 
-        FrameLayout container = new FrameLayout(context);
+        LinearLayout container = new LinearLayout(context);
+        container.setOrientation(LinearLayout.VERTICAL);
         params = createMatchParams();
         params.setMargins(0, twentyPx, 0, 0);
         container.setLayoutParams(params);
-        container.setBackgroundColor(Color.argb(100, 0, 0, 0));
+        container.setBackgroundColor(Color.argb(255, 255, 255, 255));
         root.addView(container);
 
         mInterpolatorSelectorSpinner = new Spinner(context, Spinner.MODE_DIALOG);
         params = createMatchWrapParams();
-        params.gravity = Gravity.TOP;
-        params.setMargins(tenPx, tenPx, tenPx, 0);
+        //params.gravity = Gravity.TOP;
+        params.setMargins(tenPx, twentyPx, tenPx, 0);
         mInterpolatorSelectorSpinner.setLayoutParams(params);
         container.addView(mInterpolatorSelectorSpinner);
 
 
         mCurveSelectorSpinner = new Spinner(context, Spinner.MODE_DIALOG);
         params = createMatchWrapParams();
-        params.gravity = Gravity.TOP;
-        params.setMargins(tenPx, twentyPx * 7/2, tenPx, 0);
+        //params.gravity = Gravity.TOP;
+        params.setMargins(tenPx, 0, tenPx, 0);
         mCurveSelectorSpinner.setLayoutParams(params);
         container.addView(mCurveSelectorSpinner);
 
         LinearLayout linearLayout = new LinearLayout(context);
         params = createMatchWrapParams();
         params.setMargins(0, 0, 0, dpToPx(40, resources));
-        params.gravity = Gravity.BOTTOM;
+        //params.gravity = Gravity.BOTTOM;
         linearLayout.setLayoutParams(params);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         container.addView(linearLayout);
 
         seekWrapper = new LinearLayout(context);
         params = createMatchWrapParams();
-        params.setMargins(tenPx, twentyPx, tenPx, twentyPx);
-        seekWrapper.setPadding(tenPx, tenPx, tenPx, tenPx);
+        params.setMargins(0, tenPx, 0, 0);
+        seekWrapper.setPadding(0, tenPx, 0, tenPx);
         seekWrapper.setLayoutParams(params);
         seekWrapper.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.addView(seekWrapper);
@@ -351,8 +351,8 @@ public class InterpolatorConfigurationView extends FrameLayout {
 
         seekWrapper = new LinearLayout(context);
         params = createMatchWrapParams();
-        params.setMargins(tenPx, tenPx, tenPx, twentyPx);
-        seekWrapper.setPadding(tenPx, tenPx, tenPx, tenPx);
+        params.setMargins(0, tenPx, 0, twentyPx);
+        seekWrapper.setPadding(0, tenPx, 0, tenPx);
         seekWrapper.setLayoutParams(params);
         seekWrapper.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.addView(seekWrapper);
@@ -378,7 +378,6 @@ public class InterpolatorConfigurationView extends FrameLayout {
         nub.setOnTouchListener(new OnNubTouchListener());
         nub.setBackgroundColor(Color.argb(255, 0, 164, 209));
         root.addView(nub);
-
 
         return root;
     }
@@ -577,7 +576,7 @@ public class InterpolatorConfigurationView extends FrameLayout {
                 textView.setPadding(twelvePx, twelvePx, twelvePx, twelvePx);
 
                 //textView.setTypeface(myTypeface);
-                //textView.setTextColor(mTextColor);
+                textView.setTextColor(Color.BLACK);
                 textView.setTextSize(mTextSize);
             } else {
                 //parent.setBackgroundColor(Color.argb(100, 0, 0, 0));
